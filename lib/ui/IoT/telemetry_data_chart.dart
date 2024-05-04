@@ -48,9 +48,9 @@ class _TelemetryDataChartState extends State<TelemetryDataChart> {
             // Adds previous data into line chart points.
             snapshot.data!.forEach((data) {
               widget.spots.add(data.value!);
-              widget.bottomTitles.add(DateFormat.ms().format(data.timestamp!));
+              widget.bottomTitles.add(DateFormat.ms().format(data.timestamp));
               // Saves timestamp of last added data
-              _prevTimestamp = data.timestamp!;
+              _prevTimestamp = data.timestamp;
             });
             Future.delayed(Duration.zero, () {
               setState(() {

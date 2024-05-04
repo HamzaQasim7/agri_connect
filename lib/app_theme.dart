@@ -7,6 +7,7 @@ class AppTheme {
   static const Color nearlyDarkGreen = Color(0xFF2EC821);
   static const Color nearlyGreen = Color(0xFF24D900);
   static const Color pastelGreen = Color(0xFF10d180);
+  static final Color appSecondaryColor = Color(0xFF69FF73).withOpacity(0.3);
 
   static const Color notWhite = Color(0xFFEDF0F2);
   static const Color nearlyWhite = Color(0xFFFEFEFE);

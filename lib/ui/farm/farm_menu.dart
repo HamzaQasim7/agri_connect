@@ -6,6 +6,7 @@ import 'package:getwidget/components/avatar/gf_avatar.dart';
 import 'package:getwidget/components/list_tile/gf_list_tile.dart';
 import 'package:page_transition/page_transition.dart';
 
+import '../../app_theme.dart';
 import '../../utils/user_message_helper.dart';
 
 class FarmMenu extends StatefulWidget {
@@ -26,7 +27,7 @@ class _FarmMenuState extends State<FarmMenu> {
               backgroundColor: GFColors.TRANSPARENT,
             ),
             titleText: 'Harvesting',
-            color: Colors.blueGrey[100],
+            color: AppTheme.appSecondaryColor,
             subTitle: Text('Store and view harvesting related activities.'),
             icon: Icon(Icons.chevron_right),
             onTap: () {
@@ -46,7 +47,7 @@ class _FarmMenuState extends State<FarmMenu> {
               backgroundColor: GFColors.TRANSPARENT,
             ),
             titleText: 'View News',
-            color: Colors.blueGrey[100],
+            color: Colors.redAccent.withOpacity(0.3),
             subTitle: Text('Read the latest news about agriculture here.'),
             icon: Icon(Icons.chevron_right),
             onTap: () {
@@ -67,7 +68,7 @@ class _FarmMenuState extends State<FarmMenu> {
             titleText: 'View Statistics',
             subTitle:
                 Text('Numbers based on your planting and harvesting history.'),
-            color: Colors.blueGrey[100],
+            color: Colors.lightBlueAccent.withOpacity(0.3),
             icon: Icon(Icons.chevron_right),
             onTap: () {
               UserMessageHelper.showSnackBar(context, 'Future update.');
