@@ -1,7 +1,7 @@
-import 'package:farmassist/ui/diseases/diagnosis.dart';
-import 'package:farmassist/ui/diseases/disease_card.dart';
-import 'package:farmassist/ui/diseases/view_image_region.dart';
-import 'package:farmassist/ui/widgets/tab_page.dart';
+import 'package:agriconnect/ui/diseases/diagnosis.dart';
+import 'package:agriconnect/ui/diseases/disease_card.dart';
+import 'package:agriconnect/ui/diseases/view_image_region.dart';
+import 'package:agriconnect/ui/widgets/tab_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

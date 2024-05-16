@@ -1,15 +1,16 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/data/user/repositories/user_repository.dart';
-import 'package:farmassist/ui/bottom_navigation_bar/bottom_navigation_bar.dart';
-import 'package:farmassist/ui/bottom_navigation_bar/tab_icon_data.dart';
-import 'package:farmassist/ui/diseases/disease_detection_page.dart';
-import 'package:farmassist/ui/farm/farm_management_page.dart';
-import 'package:farmassist/ui/profile/user_profile_page.dart';
-import 'package:farmassist/utils/message_handler.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/data/user/repositories/user_repository.dart';
+import 'package:agriconnect/ui/bottom_navigation_bar/bottom_navigation_bar.dart';
+import 'package:agriconnect/ui/bottom_navigation_bar/tab_icon_data.dart';
+import 'package:agriconnect/ui/diseases/disease_detection_page.dart';
+import 'package:agriconnect/ui/farm/farm_management_page.dart';
+import 'package:agriconnect/ui/profile/user_profile_page.dart';
+import 'package:agriconnect/utils/message_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'IoT/IoT_monitoring_page.dart';
+import 'farm/weather/weather_screen.dart';
 
 class HomePage extends StatefulWidget {
   static Route route() {
@@ -26,7 +27,8 @@ class _HomePageState extends State<HomePage> {
   List<TabIconData> _tabIconsList = TabIconData.tabIconsList;
   List<Widget> _tabList = [
     FarmManagementPage(pageTitle: 'Farm Management'),
-    IoTMonitoringPage(pageTitle: 'IoT Monitoring'),
+    WeatherScreen(pageTitle: 'Weather'),
+    // IoTMonitoringPage(pageTitle: 'IoT Monitoring'),
     DiseaseDetectionPage(pageTitle: 'Disease Detection'),
     UserProfilePage(pageTitle: 'My Profile'),
   ];

@@ -1,5 +1,5 @@
-import 'package:farmassist/data/farm/models/Weather.dart';
-import 'package:farmassist/data/farm/utils/weather_temp.dart';
+import 'package:agriconnect/data/farm/models/Weather.dart';
+import 'package:agriconnect/data/farm/utils/weather_temp.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

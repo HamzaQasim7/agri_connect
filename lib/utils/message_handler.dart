@@ -1,4 +1,4 @@
-import 'package:farmassist/data/user/repositories/user_repository.dart';
+import 'package:agriconnect/data/user/repositories/user_repository.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 class MessageHandler {

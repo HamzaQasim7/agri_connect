@@ -1,5 +1,5 @@
-import 'package:farmassist/ui/farm/statistics/statistics_page1.dart';
-import 'package:farmassist/ui/farm/statistics/statistics_page2.dart';
+import 'package:agriconnect/ui/farm/statistics/statistics_page1.dart';
+import 'package:agriconnect/ui/farm/statistics/statistics_page2.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/appbar/gf_appbar.dart';
 import 'package:getwidget/components/button/gf_icon_button.dart';

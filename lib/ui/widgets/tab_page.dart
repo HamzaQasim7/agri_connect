@@ -1,5 +1,5 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/ui/widgets/app_bar.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/ui/widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class TabPage extends StatefulWidget {

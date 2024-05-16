@@ -1,7 +1,7 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/bloc/login/login_cubit.dart';
-import 'package:farmassist/ui/extensions/keyboard_dismissable.dart';
-import 'package:farmassist/ui/sign_up/sign_up_page.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/bloc/login/login_cubit.dart';
+import 'package:agriconnect/ui/extensions/keyboard_dismissable.dart';
+import 'package:agriconnect/ui/sign_up/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

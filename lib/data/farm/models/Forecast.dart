@@ -1,4 +1,4 @@
-import 'package:farmassist/data/farm/models/Weather.dart';
+import 'package:agriconnect/data/farm/models/Weather.dart';
 
 class Forecast {
   final DateTime? lastUpdated;

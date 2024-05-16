@@ -1,10 +1,10 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/bloc/authentication/authentication.dart';
-import 'package:farmassist/ui/login/login_page.dart';
-import 'package:farmassist/ui/profile/avatar.dart';
-import 'package:farmassist/ui/profile/user_info_field.dart';
-import 'package:farmassist/ui/widgets/tab_page.dart';
-import 'package:farmassist/utils/message_handler.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/bloc/authentication/authentication.dart';
+import 'package:agriconnect/ui/login/login_page.dart';
+import 'package:agriconnect/ui/profile/avatar.dart';
+import 'package:agriconnect/ui/profile/user_info_field.dart';
+import 'package:agriconnect/ui/widgets/tab_page.dart';
+import 'package:agriconnect/utils/message_handler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

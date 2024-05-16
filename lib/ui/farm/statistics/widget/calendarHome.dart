@@ -1,4 +1,4 @@
-import 'package:farmassist/ui/farm/statistics/utils/getEvents.dart';
+import 'package:agriconnect/ui/farm/statistics/utils/getEvents.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neat_and_clean_calendar/flutter_neat_and_clean_calendar.dart';
 

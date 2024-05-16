@@ -1,4 +1,4 @@
-import 'package:farmassist/app_theme.dart';
+import 'package:agriconnect/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
@@ -71,7 +71,7 @@ class _DisplayPlantingState extends State<DisplayPlanting> {
           padding: EdgeInsets.all(5.0),
           child: Column(
             children: <Widget>[
-              new Expanded(
+               Expanded(
                 child: ListView(
                   padding: EdgeInsets.all(10.0),
                   children: <Widget>[

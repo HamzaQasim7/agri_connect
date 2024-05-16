@@ -1,6 +1,6 @@
-import 'package:farmassist/data/IoT/telemetry_data_repository.dart';
-import 'package:farmassist/ui/IoT/telemetry_data_card_item.dart';
-import 'package:farmassist/utils/fixed_sized_queue.dart';
+import 'package:agriconnect/data/IoT/telemetry_data_repository.dart';
+import 'package:agriconnect/ui/IoT/telemetry_data_card_item.dart';
+import 'package:agriconnect/utils/fixed_sized_queue.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

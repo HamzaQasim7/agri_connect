@@ -1,6 +1,6 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/ui/farm/harvesting/harvesting_list.dart';
-import 'package:farmassist/ui/farm/harvesting/planting_selection_list.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/ui/farm/harvesting/harvesting_list.dart';
+import 'package:agriconnect/ui/farm/harvesting/planting_selection_list.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:page_transition/page_transition.dart';

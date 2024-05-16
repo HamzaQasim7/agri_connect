@@ -1,6 +1,6 @@
-import 'package:farmassist/bloc/sign_up/sign_up_cubit.dart';
-import 'package:farmassist/data/authentication/repositories/authentication_repository.dart';
-import 'package:farmassist/ui/sign_up/sign_up_form.dart';
+import 'package:agriconnect/bloc/sign_up/sign_up_cubit.dart';
+import 'package:agriconnect/data/authentication/repositories/authentication_repository.dart';
+import 'package:agriconnect/ui/sign_up/sign_up_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

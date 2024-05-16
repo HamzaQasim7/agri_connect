@@ -1,6 +1,6 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/data/IoT/models/telemetry_data.dart';
-import 'package:farmassist/ui/IoT/reload_time.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/data/IoT/models/telemetry_data.dart';
+import 'package:agriconnect/ui/IoT/reload_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';

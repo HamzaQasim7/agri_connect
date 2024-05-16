@@ -1,4 +1,4 @@
-import 'package:farmassist/data/farm/utils/WeatherIconMapper.dart';
+import 'package:agriconnect/data/farm/utils/WeatherIconMapper.dart';
 import 'package:flutter/material.dart';
 
 enum WeatherCondition {

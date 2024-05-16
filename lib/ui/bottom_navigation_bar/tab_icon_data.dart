@@ -27,11 +27,11 @@ class TabIconData {
       animationController: null,
     ),
     TabIconData(
-      imagePath: 'assets/images/IoT_monitoring_tab.png',
-      selectedImagePath: 'assets/images/IoT_monitoring_tab_selected.png',
+      imagePath: 'assets/images/unselect_weather_icon.png',
+      selectedImagePath: 'assets/images/select_weather_icon.png',
       index: 1,
       isSelected: false,
-      label: 'Monitor',
+      label: 'Weather',
       animationController: null,
     ),
     TabIconData(

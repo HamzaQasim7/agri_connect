@@ -1,6 +1,6 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/ui/diseases/diagnosis.dart';
-import 'package:farmassist/ui/diseases/disease_card_item.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/ui/diseases/diagnosis.dart';
+import 'package:agriconnect/ui/diseases/disease_card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

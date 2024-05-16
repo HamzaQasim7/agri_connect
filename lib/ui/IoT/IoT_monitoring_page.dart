@@ -1,9 +1,9 @@
-import 'package:farmassist/data/IoT/repositories/telemetry_data_repository.dart';
-import 'package:farmassist/ui/IoT/reload_bar.dart';
-import 'package:farmassist/ui/IoT/reload_time.dart';
-import 'package:farmassist/ui/IoT/telemetry_data_card.dart';
-import 'package:farmassist/ui/IoT/telemetry_data_card_item.dart';
-import 'package:farmassist/ui/widgets/tab_page.dart';
+import 'package:agriconnect/data/IoT/repositories/telemetry_data_repository.dart';
+import 'package:agriconnect/ui/IoT/reload_bar.dart';
+import 'package:agriconnect/ui/IoT/reload_time.dart';
+import 'package:agriconnect/ui/IoT/telemetry_data_card.dart';
+import 'package:agriconnect/ui/IoT/telemetry_data_card_item.dart';
+import 'package:agriconnect/ui/widgets/tab_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';

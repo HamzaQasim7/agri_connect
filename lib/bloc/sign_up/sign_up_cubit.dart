@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
-import 'package:farmassist/bloc/authentication/authentication.dart';
-import 'package:farmassist/bloc/sign_up/sign_up_state.dart';
-import 'package:farmassist/data/authentication/repositories/authentication_repository.dart';
+import 'package:agriconnect/bloc/authentication/authentication.dart';
+import 'package:agriconnect/bloc/sign_up/sign_up_state.dart';
+import 'package:agriconnect/data/authentication/repositories/authentication_repository.dart';
 import 'package:formz/formz.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {

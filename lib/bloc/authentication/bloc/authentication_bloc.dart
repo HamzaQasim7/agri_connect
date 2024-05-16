@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:farmassist/data/authentication/models/user.dart';
-import 'package:farmassist/data/authentication/repositories/authentication_repository.dart';
+import 'package:agriconnect/data/authentication/models/user.dart';
+import 'package:agriconnect/data/authentication/repositories/authentication_repository.dart';
 import 'package:pedantic/pedantic.dart';
 
 part 'authentication_event.dart';

@@ -1,5 +1,5 @@
-import 'package:farmassist/data/farm/models/Weather.dart';
-import 'package:farmassist/data/farm/view_model/weather_app_forecast_viewmodel.dart';
+import 'package:agriconnect/data/farm/models/Weather.dart';
+import 'package:agriconnect/data/farm/view_model/weather_app_forecast_viewmodel.dart';
 import 'package:flutter/material.dart';
 
 class WeatherSummary extends StatelessWidget {
@@ -58,7 +58,7 @@ class WeatherSummary extends StatelessWidget {
     );
   }
 
-  String _formatTemperature(double t) {
+  String _formatTemperature(double? t) {
     var temp = (t == null ? '' : t.round().toString());
     return temp;
   }

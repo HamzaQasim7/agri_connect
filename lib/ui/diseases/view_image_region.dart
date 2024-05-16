@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/data/diseases/classifier.dart';
-import 'package:farmassist/data/diseases/disease_detection_model.dart';
-import 'package:farmassist/ui/diseases/diagnosis.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/data/diseases/classifier.dart';
+import 'package:agriconnect/data/diseases/disease_detection_model.dart';
+import 'package:agriconnect/ui/diseases/diagnosis.dart';
 import 'package:flutter/material.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_cropper/image_cropper.dart';

@@ -1,5 +1,5 @@
-import 'package:farmassist/bloc/login/login_cubit.dart';
-import 'package:farmassist/data/authentication/repositories/authentication_repository.dart';
+import 'package:agriconnect/bloc/login/login_cubit.dart';
+import 'package:agriconnect/data/authentication/repositories/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

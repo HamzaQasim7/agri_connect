@@ -1,5 +1,5 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/data/user/repositories/user_repository.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/data/user/repositories/user_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

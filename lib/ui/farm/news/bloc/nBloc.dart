@@ -1,4 +1,4 @@
-import 'package:farmassist/data/farm/resources/repository.dart';
+import 'package:agriconnect/data/farm/resources/repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'nEvent.dart';

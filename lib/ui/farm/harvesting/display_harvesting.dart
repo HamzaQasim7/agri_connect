@@ -88,7 +88,7 @@ class _DisplayHarvestingState extends State<DisplayHarvesting> {
           padding: EdgeInsets.all(5.0),
           child: Column(
             children: <Widget>[
-              new Expanded(
+              Expanded(
                 child: ListView(
                   padding: EdgeInsets.all(10.0),
                   children: <Widget>[

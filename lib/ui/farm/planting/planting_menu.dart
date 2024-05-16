@@ -1,6 +1,6 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/ui/farm/planting/form_storePlanting.dart';
-import 'package:farmassist/ui/farm/planting/planting_list.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/ui/farm/planting/form_storePlanting.dart';
+import 'package:agriconnect/ui/farm/planting/planting_list.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:page_transition/page_transition.dart';

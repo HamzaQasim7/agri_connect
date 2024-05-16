@@ -1,5 +1,5 @@
-import 'package:farmassist/data/farm/helper/constants.dart';
-import 'package:farmassist/data/farm/models/News.dart';
+import 'package:agriconnect/data/farm/helper/constants.dart';
+import 'package:agriconnect/data/farm/models/News.dart';
 import 'package:http/http.dart';
 
 class NewsApiProvider {

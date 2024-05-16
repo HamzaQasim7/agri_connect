@@ -1,7 +1,7 @@
-import 'package:farmassist/data/farm/models/News.dart';
-import 'package:farmassist/ui/farm/news_details/bloc/bloc.dart';
-import 'package:farmassist/ui/farm/news_details/newsDetailPage.dart';
-import 'package:farmassist/ui/widgets/news_customWidget.dart';
+import 'package:agriconnect/data/farm/models/News.dart';
+import 'package:agriconnect/ui/farm/news_details/bloc/bloc.dart';
+import 'package:agriconnect/ui/farm/news_details/newsDetailPage.dart';
+import 'package:agriconnect/ui/widgets/news_customWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:page_transition/page_transition.dart';

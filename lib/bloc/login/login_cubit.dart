@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:farmassist/bloc/authentication/authentication.dart';
-import 'package:farmassist/data/authentication/repositories/authentication_repository.dart';
+import 'package:agriconnect/bloc/authentication/authentication.dart';
+import 'package:agriconnect/data/authentication/repositories/authentication_repository.dart';
 import 'package:formz/formz.dart';
 
 import '../sign_up/sign_up_state.dart';

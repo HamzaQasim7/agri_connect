@@ -34,7 +34,7 @@ void addData(Map<String, dynamic> obj) {
 
   estimate = obj['plantEstimated'];
   day = estimate.round() * 7;
-  futureDate = dt.add(new Duration(days: day));
+  futureDate = dt.add(Duration(days: day));
   final String harvestDate = formatter.format(futureDate);
 
   CollectionReference cr =

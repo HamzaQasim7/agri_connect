@@ -1,4 +1,5 @@
-import 'package:farmassist/data/farm/view_model/cityEntryViewModel.dart';
+import 'package:agriconnect/data/farm/view_model/cityEntryViewModel.dart';
+import 'package:agriconnect/ui/extensions/keyboard_dismissable.dart';
 import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
@@ -10,14 +11,14 @@ class CityEntryView extends StatefulWidget {
 }
 
 class _CityEntryState extends State<CityEntryView> {
-  late TextEditingController cityEditController;
+  late final TextEditingController cityEditController;
   String _currentCity = '';
 
   @override
-  void initState() {
+  initState() {
     super.initState();
 
-    cityEditController = new TextEditingController();
+    cityEditController = TextEditingController();
     _getCurrentLocationCity();
     // sync the current value in text field to
     // the view model
@@ -96,6 +97,9 @@ class _CityEntryState extends State<CityEntryView> {
                 SizedBox(width: 10),
                 Expanded(
                     child: TextField(
+                        onTapOutside: (event) {
+                          context.dismissKeyboard;
+                        },
                         controller: cityEditController,
                         decoration:
                             InputDecoration.collapsed(hintText: "Enter City"),

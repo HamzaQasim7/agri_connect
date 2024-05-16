@@ -1,5 +1,5 @@
-import 'package:farmassist/data/farm/models/Forecast.dart';
-import 'package:farmassist/data/farm/services/weather_api.dart';
+import 'package:agriconnect/data/farm/models/Forecast.dart';
+import 'package:agriconnect/data/farm/services/weather_api.dart';
 
 class ForecastService {
   final WeatherApi weatherApi;

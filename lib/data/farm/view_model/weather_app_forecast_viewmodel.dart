@@ -1,10 +1,10 @@
-import 'package:farmassist/data/farm/api/openweathermap_weather_api.dart';
-import 'package:farmassist/data/farm/models/Forecast.dart';
-import 'package:farmassist/data/farm/models/Weather.dart';
-import 'package:farmassist/data/farm/services/forecast_service.dart';
-import 'package:farmassist/data/farm/utils/WeatherIconMapper.dart';
-import 'package:farmassist/data/farm/utils/weather_strings.dart';
-import 'package:farmassist/data/farm/utils/weather_temp.dart';
+import 'package:agriconnect/data/farm/api/openweathermap_weather_api.dart';
+import 'package:agriconnect/data/farm/models/Forecast.dart';
+import 'package:agriconnect/data/farm/models/Weather.dart';
+import 'package:agriconnect/data/farm/services/forecast_service.dart';
+import 'package:agriconnect/data/farm/utils/WeatherIconMapper.dart';
+import 'package:agriconnect/data/farm/utils/weather_strings.dart';
+import 'package:agriconnect/data/farm/utils/weather_temp.dart';
 import 'package:flutter/cupertino.dart';
 
 class ForecastViewModel with ChangeNotifier {
@@ -14,20 +14,20 @@ class ForecastViewModel with ChangeNotifier {
 
   WeatherCondition _condition = WeatherCondition.unknown;
 
-  String _description = ''; // Initialize with an empty string
-  String _iconCode = ''; // Initialize with an empty string
-  IconData _iconData = WeatherIcons.clear_day; // Initialize with a default icon
-  double _minTemp = 0.0; // Initialize with a default value
-  double _maxTemp = 0.0; // Initialize with a default value
-  double _temp = 0.0; // Initialize with a default value
-  double _feelsLike = 0.0; // Initialize with a default value
-  int _locationId = 0; // Initialize with a default value
-  DateTime _lastUpdated = DateTime.now(); // Initialize with the current time
-  String _city = ''; // Initialize with an empty string
-  double _latitude = 0.0; // Initialize with a default value
-  double _longitude = 0.0; // Initialize with a default value
-  List<Weather> _daily = []; // Initialize with an empty list
-  bool _isDayTime = false; // Initialize with a default value
+  String _description = '';
+  String _iconCode = '';
+  IconData _iconData = WeatherIcons.clear_day;
+  double _minTemp = 0.0;
+  double _maxTemp = 0.0;
+  double _temp = 0.0;
+  double _feelsLike = 0.0;
+  int _locationId = 0;
+  DateTime _lastUpdated = DateTime.now();
+  String _city = '';
+  double _latitude = 0.0;
+  double _longitude = 0.0;
+  List<Weather> _daily = [];
+  bool _isDayTime = false;
 
   WeatherCondition get condition => _condition;
   IconData get iconData => getIconData(_iconCode);

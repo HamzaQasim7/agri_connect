@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:farmassist/data/farm/utils/weather_strings.dart';
-import 'package:farmassist/ui/farm/harvesting/form_storeHarvesting.dart';
+import 'package:agriconnect/data/farm/utils/weather_strings.dart';
+import 'package:agriconnect/ui/farm/harvesting/form_storeHarvesting.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -14,7 +14,7 @@ import 'package:page_transition/page_transition.dart';
 import '../../../app_theme.dart';
 
 class PlantingSelectionList extends StatefulWidget {
-  FirebaseFirestore db = FirebaseFirestore.instance;
+  final FirebaseFirestore db = FirebaseFirestore.instance;
 
   @override
   _PlantingSelectionListState createState() => _PlantingSelectionListState();
@@ -60,6 +60,7 @@ class _PlantingSelectionListState extends State<PlantingSelectionList> {
                     setState(() {
                       _option = value;
                       uid = user!.uid;
+                      print('${uid}${_option}');
                     });
                   },
                   enabled: true,
@@ -109,11 +110,11 @@ class _PlantingSelectionListState extends State<PlantingSelectionList> {
                   .snapshots(),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
-                  return Text('Loading...');
+                  return Center(child: Text('Loading...'));
                 }
                 return Column(
                   children: [
-                    new Expanded(
+                    Expanded(
                         child: ListView.builder(
                             itemCount: snapshot.data!.docs.length,
                             itemBuilder: (context, index) {

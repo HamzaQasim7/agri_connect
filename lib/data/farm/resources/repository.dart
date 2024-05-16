@@ -1,4 +1,4 @@
-import 'package:farmassist/data/farm/models/News.dart';
+import 'package:agriconnect/data/farm/models/News.dart';
 
 import 'newsAPI.dart';
 

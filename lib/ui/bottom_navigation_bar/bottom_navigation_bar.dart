@@ -1,7 +1,7 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/ui/bottom_navigation_bar/tab_clipper.dart';
-import 'package:farmassist/ui/bottom_navigation_bar/tab_icon.dart';
-import 'package:farmassist/ui/bottom_navigation_bar/tab_icon_data.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/ui/bottom_navigation_bar/tab_clipper.dart';
+import 'package:agriconnect/ui/bottom_navigation_bar/tab_icon.dart';
+import 'package:agriconnect/ui/bottom_navigation_bar/tab_icon_data.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {

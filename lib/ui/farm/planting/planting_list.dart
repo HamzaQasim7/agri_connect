@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:farmassist/data/farm/utils/weather_strings.dart';
-import 'package:farmassist/ui/farm/planting/display_planting.dart';
+import 'package:agriconnect/data/farm/utils/weather_strings.dart';
+import 'package:agriconnect/ui/farm/planting/display_planting.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -109,7 +109,7 @@ class _PlantingListState extends State<PlantingList> {
                   .doc(uid)
                   .collection('month')
                   .where('month', isEqualTo: _option)
-                  .orderBy('day', descending: true)
+                  // .orderBy('day', descending: true)
                   .snapshots(),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {

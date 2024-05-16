@@ -28,6 +28,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "build/app/outputs/apk/release/*.apk"
-          token: ${{ secrets.FARMASSIST_SECRET }}
+          token: ${{ secrets.agriconnect_SECRET }}
           commit: master
           tag: v1.0.${{ github.run_number }}

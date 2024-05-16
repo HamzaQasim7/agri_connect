@@ -1,5 +1,5 @@
-import 'package:farmassist/ui/farm/farm_menu.dart';
-import 'package:farmassist/ui/widgets/tab_page.dart';
+import 'package:agriconnect/ui/farm/farm_menu.dart';
+import 'package:agriconnect/ui/widgets/tab_page.dart';
 import 'package:flutter/material.dart';
 
 class FarmManagementPage extends TabPage {

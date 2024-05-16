@@ -1,4 +1,4 @@
-import 'package:farmassist/app_theme.dart';
+import 'package:agriconnect/app_theme.dart';
 import 'package:flutter/material.dart';
 
 const _avatarSize = 48.0;

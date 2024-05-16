@@ -1,10 +1,10 @@
-import 'package:farmassist/app_theme.dart';
-import 'package:farmassist/data/IoT/models/telemetry_data.dart';
-import 'package:farmassist/data/IoT/repositories/telemetry_data_repository.dart';
-import 'package:farmassist/ui/IoT/reload_time.dart';
-import 'package:farmassist/ui/IoT/telemetry_data_card_item.dart';
-import 'package:farmassist/ui/IoT/telemetry_data_chart.dart';
-import 'package:farmassist/ui/IoT/telemetry_data_reading.dart';
+import 'package:agriconnect/app_theme.dart';
+import 'package:agriconnect/data/IoT/models/telemetry_data.dart';
+import 'package:agriconnect/data/IoT/repositories/telemetry_data_repository.dart';
+import 'package:agriconnect/ui/IoT/reload_time.dart';
+import 'package:agriconnect/ui/IoT/telemetry_data_card_item.dart';
+import 'package:agriconnect/ui/IoT/telemetry_data_chart.dart';
+import 'package:agriconnect/ui/IoT/telemetry_data_reading.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -19,10 +19,16 @@ class TelemetryDataCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final initialData = TelemetryData(
-        timestamp:
-            DateFormat('dd-MM-yyyy HH:mm:ss').parse(reloadTime.reloadTime));
+    DateTime? timestamp;
+    try {
+      timestamp =
+          DateFormat('dd-MM-yyyy HH:mm:ss').parse(reloadTime.reloadTime);
+    } on FormatException {
+      // Handle the exception,
+      timestamp = DateTime.now();
+    }
 
+    final initialData = TelemetryData(timestamp: timestamp);
     return StreamProvider<TelemetryData>(
       create: (context) =>
           context.read<TelemetryDataRepository>().readData(cardItem.data),

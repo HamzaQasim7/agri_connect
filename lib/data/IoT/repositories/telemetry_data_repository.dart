@@ -1,4 +1,4 @@
-import 'package:farmassist/data/IoT/models/telemetry_data.dart';
+import 'package:agriconnect/data/IoT/models/telemetry_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 

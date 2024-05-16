@@ -1,8 +1,8 @@
-# Farmassist
+# AgriConnect
 
 <p align=center><img src="./docs/img/app_icon.png" width=20% height=20%></p>
 
-Farmassist is a smart farming app for IoT and AI-powered plant disease detection. It is built with Flutter and uses Firebase as its backend.
+AgriConnect is a smart farming app for IoT and AI-powered plant disease detection. It is built with Flutter and uses Firebase as its backend.
 
 ### App Screenshots
 
@@ -12,14 +12,13 @@ Farmassist is a smart farming app for IoT and AI-powered plant disease detection
 
 ### Download Android APK
 
-You can download the latest version of the Android APK [here](https://github.com/farmassistX/farmassist/releases/tag/v1.0.21).
-
+You can download the latest version of the Android APK [here]
 ## Architecture
 
 <p align=center><img src="./docs/img/architecture.png" width=75% height=75%></p>
-<p align="center"><i>Architecture Diagram of Farmassist</i></p>
+<p align="center"><i>Architecture Diagram of AgriConnect</i></p>
 
-The above illustration shows a high level overview of the Farmassist project. Farmassist consists of 3 subsystems:
+The above illustration shows a high level overview of the AgriConnect project. AgriConnect consists of 3 subsystems:
 
 - [Farm Management Subsystem](#farm-management): Users can view agricultural news and manage planting and harvesting data.
 - [IoT Monitoring Subsystem](#iot-monitoring): Users can view IoT telemetry data from the farm in the form of charts and receive alert notifications for abnormal telemetry data.
@@ -38,14 +37,14 @@ The following sections explain more detail about the services and components use
 
 ## Authentication and User Profile
 
-The signup and login flow of Farmassist is developed using the [Bloc](https://bloclibrary.dev/#/) library and Firebase Authentication. After a user signs up successfully, the user data will be stored in the data model of Cloud Firestore as shown below:
+The signup and login flow of AgriConnect is developed using the [Bloc](https://bloclibrary.dev/#/) library and Firebase Authentication. After a user signs up successfully, the user data will be stored in the data model of Cloud Firestore as shown below:
 
 ```
 {
   "users": { // "users" collection
     "4lbwvicymz71LfY9POHZ": { // "userId" document
       "id": "4lbwvicymz71LfY9POHZ",
-      "email": "example@farmassist.com",
+      "email": "example@agriconnect.com",
       "displayName": "Jack",
       "tokens": [ ... ] // used by Cloud Messaging
     },
@@ -90,7 +89,7 @@ Under farm management, 2 extra APIs are used:
 
 ## IoT Monitoring
 
-Realtime Database acts as a repository of IoT telemetry data that performs data synchronization with the Farmassist app. The overall process of IoT monitoring is described as follows:
+Realtime Database acts as a repository of IoT telemetry data that performs data synchronization with the AgriConnect app. The overall process of IoT monitoring is described as follows:
 
 1. When new telemetry data is stored in Realtime Database, Cloud Functions will be triggered.
 2. Cloud Functions execute a function to check for abnormal values in the received telemetry data.
@@ -125,9 +124,9 @@ Each telemetry data is stored as a key-value pair of timestamp and value. An exa
 }
 ```
 
-For demonstration purpose, a minimal IoT device simulator is built to send telemetry data to Realtime Database. For more information, you can refer to [Farmassist IoT Device Simulator](https://github.com/farmassistX/farmassist-iot-device-simulator).
+For demonstration purpose, a minimal IoT device simulator is built to send telemetry data to Realtime Database. For more information, you can refer to [agriconnect IoT Device Simulator](https://github.com/agriconnectX/agriconnect-iot-device-simulator).
 
-The code for Cloud Functions can be found in [Farmassist Firebase](https://github.com/farmassistX/farmassist-firebase).
+The code for Cloud Functions can be found in [AgriConnect Firebase](https://github.com/agriconnectX/agriconnect-firebase).
 
 ## Plant Disease Detection
 
@@ -144,7 +143,7 @@ After training, the model was exported as a [TensorFlow Lite](https://www.tensor
 
 ## Flutter Packages Used
 
-Some of the useful Flutter packages used in the Farmassist app are listed in the table below. Refer to [pubspec.yaml](pubspec.yaml) for the complete package information.
+Some of the useful Flutter packages used in the agriconnect app are listed in the table below. Refer to [pubspec.yaml](pubspec.yaml) for the complete package information.
 
 |                                                                     Package                                                                     | Functions                                                                                                                                       |
 | :---------------------------------------------------------------------------------------------------------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -158,15 +157,15 @@ Some of the useful Flutter packages used in the Farmassist app are listed in the
 Things to do if you want to fork or contribute to the project.
 
 1. [Create a Firebase project and add Firebase to your Flutter app](https://firebase.google.com/docs/flutter/setup?platform=android).
-2. Refer to [Farmassist IoT Device Simulator](https://github.com/farmassistX/farmassist-iot-device-simulator) to see how fake telemetery data can be sent to Realtime Database.
-3. Refer to [Farmassist Firebase](https://github.com/farmassistX/farmassist-firebase) for the Cloud Functions code that call Cloud Messaging service.
+2. Refer to [agriconnect IoT Device Simulator](https://github.com/agriconnectX/agriconnect-iot-device-simulator) to see how fake telemetery data can be sent to Realtime Database.
+3. Refer to [agriconnect Firebase](https://github.com/agriconnectX/agriconnect-firebase) for the Cloud Functions code that call Cloud Messaging service.
 4. Refer to [Edge Device Model Quickstart](https://cloud.google.com/vision/automl/docs/edge-quickstart) if you want to train your own model for plant disease detection.
 5. Refer to [CI/CD for Flutter Apps Using GitHub Actions](https://betterprogramming.pub/ci-cd-for-flutter-apps-using-github-actions-b833f8f7aac) to set up a workflow that can release an APK for your Flutter app whenever someone pushes the code to GitHub. Instead of using `push` event, I set up a manual trigger with `workflow_dispatch` event.
 
 ## References
 
-- [GitHub: Farmassist IoT Device Simulator](https://github.com/farmassistX/farmassist-iot-device-simulator)
-- [GitHub: Farmassist Firebase](https://github.com/farmassistX/farmassist-firebase)
+- [GitHub: agriconnect IoT Device Simulator](https://github.com/agriconnectX/agriconnect-iot-device-simulator)
+- [GitHub: agriconnect Firebase](https://github.com/agriconnectX/agriconnect-firebase)
 - [Bloc: Flutter Firebase Login Tutorial](https://bloclibrary.dev/#/flutterfirebaselogintutorial)
 - [FlutterFire: Cloud Messaging Usage](https://firebase.flutter.dev/docs/messaging/usage)
 - [Google Cloud AutoML Vision: Edge Device Model Quickstart](https://cloud.google.com/vision/automl/docs/edge-quickstart)

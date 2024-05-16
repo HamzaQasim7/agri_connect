@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:farmassist/ui/extensions/custom_snackbar.dart';
-import 'package:farmassist/ui/home_page.dart';
-import 'package:farmassist/ui/login/login_page.dart';
+import 'package:agriconnect/ui/extensions/custom_snackbar.dart';
+import 'package:agriconnect/ui/home_page.dart';
+import 'package:agriconnect/ui/login/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';

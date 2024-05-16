@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:farmassist/data/farm/models/News.dart';
+import 'package:agriconnect/data/farm/models/News.dart';
 
 abstract class DetailState extends Equatable {
   const DetailState();

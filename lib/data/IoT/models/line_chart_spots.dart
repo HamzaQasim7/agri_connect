@@ -1,4 +1,4 @@
-import 'package:farmassist/utils/fixed_sized_queue.dart';
+import 'package:agriconnect/utils/fixed_sized_queue.dart';
 import 'package:fl_chart/fl_chart.dart';
 
 /// A wrapper of [FixedSizedQueue] that is used to store coordinates

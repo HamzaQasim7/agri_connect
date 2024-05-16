@@ -1,4 +1,4 @@
-import 'package:farmassist/ui/farm/statistics/utils/getHarvestingInfo.dart';
+import 'package:agriconnect/ui/farm/statistics/utils/getHarvestingInfo.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
