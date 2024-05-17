@@ -1,7 +1,8 @@
-import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
 import 'package:agriconnect/bloc/authentication/authentication.dart';
 import 'package:agriconnect/data/authentication/repositories/authentication_repository.dart';
+import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:formz/formz.dart';
 
 import '../sign_up/sign_up_state.dart';
@@ -73,10 +74,10 @@ class LoginCubit extends Cubit<LoginState> {
     }
   }
 
-  Future<void> logInWithGoogle() async {
+  Future<void> logInWithGoogle(BuildContext context) async {
     emit(state.copyWith(status: FormzStatus.submissionInProgress));
     try {
-      await _authenticationRepository.logInWithGoogle();
+      await _authenticationRepository.logInWithGoogle(context);
       emit(state.copyWith(status: FormzStatus.submissionSuccess));
     } on Exception {
       emit(state.copyWith(status: FormzStatus.submissionFailure));

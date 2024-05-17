@@ -16,6 +16,11 @@ class LoginForm extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('Authentication Failure')),
           );
+        } else if (state.status == FormzStatus.submissionSuccess) {
+          Navigator.of(context).pushReplacementNamed('/home');
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Authentication Completed')),
+          );
         }
       },
       child: SingleChildScrollView(
@@ -40,8 +45,8 @@ class LoginForm extends StatelessWidget {
               _LoginButton(),
               const SizedBox(height: 24.0),
               _SignUpButton(),
-              const SizedBox(height: 24.0),
-              _GoogleLoginButton(),
+              // const SizedBox(height: 24.0),
+              // _GoogleLoginButton(),
             ],
           ),
         ),
@@ -198,7 +203,7 @@ class _GoogleLoginButton extends StatelessWidget {
         //   GoogleSignInHelper go = GoogleSignInHelper();
         //   go.signInWithGoogle(context);
         // },
-        onPressed: () => context.read<LoginCubit>().logInWithGoogle(),
+        onPressed: () => context.read<LoginCubit>().logInWithGoogle(context),
       ),
     );
   }

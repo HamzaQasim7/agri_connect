@@ -5,7 +5,54 @@ import 'package:flutter_neat_and_clean_calendar/neat_and_clean_calendar_event.da
 final FirebaseAuth auth = FirebaseAuth.instance;
 final FirebaseFirestore db = FirebaseFirestore.instance;
 
-Map<DateTime, List<NeatCleanCalendarEvent>> getHarvestEvents() {
+Future<Map<DateTime, List<NeatCleanCalendarEvent>>> getHarvestEvents() async {
+  User? user = auth.currentUser;
+  final uid = user!.uid;
+  Map<DateTime, List<NeatCleanCalendarEvent>> _events = {};
+
+  QuerySnapshot snapshot =
+      await db.collection('planting').doc(uid).collection('month').get();
+
+  for (QueryDocumentSnapshot element in snapshot.docs) {
+    if (element.get('month') == -99) {
+      // Skipping elements with 'month' value -99
+      continue;
+    } else {
+      var plantName = element.get('name');
+      DateTime harvestDate = DateTime(
+        element.get('harvestYear'),
+        element.get('harvestMonth'),
+        element.get('harvestDay'),
+      );
+
+      if (_events.containsKey(harvestDate)) {
+        _events[harvestDate]!.add(
+          NeatCleanCalendarEvent(
+            'Harvest $plantName',
+            startTime: harvestDate,
+            endTime: harvestDate.add(Duration(days: 1)),
+            description: 'Harvest $plantName',
+            isDone: element.get('harvested'),
+          ),
+        );
+      } else {
+        _events[harvestDate] = [
+          NeatCleanCalendarEvent(
+            'Harvest $plantName',
+            startTime: harvestDate,
+            endTime: harvestDate.add(Duration(days: 1)),
+            description: 'Harvest $plantName',
+            isDone: element.get('harvested'),
+          )
+        ];
+      }
+    }
+  }
+
+  return _events;
+}
+
+Map<DateTime, List<NeatCleanCalendarEvent>> getHarvestEventss() {
   User? user = auth.currentUser;
   final uid = user!.uid;
   Map<DateTime, List<NeatCleanCalendarEvent>> _events = {};

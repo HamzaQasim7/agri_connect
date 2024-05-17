@@ -38,9 +38,13 @@ class _StatisticsHomeState extends State<StatisticsHome> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    PageController pageController = PageController(initialPage: 0);
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
         appBar: GFAppBar(
           leading: GFIconButton(
@@ -63,11 +67,21 @@ class _StatisticsHomeState extends State<StatisticsHome> {
         ),
         body: Column(
           children: [
-            new Expanded(
+            Expanded(
               child: PageView(
                 pageSnapping: true,
                 controller: _pageController,
                 children: [
+                  // Container(
+                  //   color: Colors.redAccent,
+                  //   width: 33,
+                  //   height: 22,
+                  // ),
+                  // Container(
+                  //   color: Colors.blue,
+                  //   width: 33,
+                  //   height: 22,
+                  // ),
                   StatisticsPageOne(),
                   StatisticsPage2(),
                 ],

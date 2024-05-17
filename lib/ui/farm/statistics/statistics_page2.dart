@@ -20,7 +20,7 @@ class _StatisticsPage2State extends State<StatisticsPage2> {
   final Color barBackgroundColor = const Color(0xff72d8bf);
   final Duration animDuration = const Duration(milliseconds: 250);
 
-  late int touchedIndex;
+  int touchedIndex = 0;
   bool isPlaying = false;
   Map<int, List> _map = getHarvesting();
   Map<int, String> _key = getKeys();
@@ -130,8 +130,7 @@ class _StatisticsPage2State extends State<StatisticsPage2> {
             String weekDay;
             int x = group.x.toInt();
             weekDay = _key[x]!;
-            return BarTooltipItem(
-                weekDay + '\n' + (rod.toY - 1).toString(),
+            return BarTooltipItem(weekDay + '\n' + (rod.toY - 1).toString(),
                 TextStyle(color: Colors.yellow));
           },
         ),
@@ -156,10 +155,10 @@ class _StatisticsPage2State extends State<StatisticsPage2> {
             },
             reservedSize: 30, // Adjust the reserved size as needed
           ),
-        //   textStyle: TextStyle(
-        //       color: Colors.white,
-        //       fontWeight: FontWeight.bold,
-        //       fontSize: 14),
+          //   textStyle: TextStyle(
+          //       color: Colors.white,
+          //       fontWeight: FontWeight.bold,
+          //       fontSize: 14),
         ),
         leftTitles: AxisTitles(
           sideTitles: SideTitles(

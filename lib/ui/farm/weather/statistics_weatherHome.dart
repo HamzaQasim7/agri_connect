@@ -16,37 +16,62 @@ class _WeatherHomeStatisticsState extends State<WeatherHomeStatistics> {
   Widget build(BuildContext context) {
     return Consumer<ForecastViewModel>(
       builder: (context, model, child) => Container(
+        width: MediaQuery.sizeOf(context).width,
+        height: MediaQuery.sizeOf(context).height * 0.3,
         child: _buildGradientContainer(
-            model.condition, model.isDaytime, buildHomeView(context, model)),
+          model.condition,
+          model.isDaytime,
+          buildHomeView(context, model),
+        ),
       ),
     );
   }
 
-  @override
-  Widget buildHomeView(BuildContext context, model) {
-    return Consumer<ForecastViewModel>(
-        builder: (context, weatherViewModel, child) => Container(
-            height: 160,
-            child: SizedBox(
-              width: 300,
-              height: 500,
-              child: ListView(
-                children: <Widget>[
-                  weatherViewModel.daily == null
-                      ? Center(
-                          child: Text('Oops...something went wrong',
-                              style:
-                                  TextStyle(fontSize: 21, color: Colors.white)))
-                      : Column(
-                          children: [buildDailySummary(weatherViewModel.daily)],
-                        ),
-                ],
+  Widget buildHomeView(BuildContext context, ForecastViewModel model) {
+    return SizedBox(
+      width: 300,
+      height: 500,
+      child: model.daily == null
+          ? Center(
+              child: Text(
+                'Oops...something went wrong',
+                style: TextStyle(fontSize: 21, color: Colors.white),
               ),
-            )));
+            )
+          : ListView(
+              shrinkWrap: true,
+              children: [
+                buildDailySummary(model.daily),
+              ],
+            ),
+    );
   }
+  // Widget buildHomeView(BuildContext context, model) {
+  //   return Consumer<ForecastViewModel>(
+  //       builder: (context, weatherViewModel, child) => SizedBox(
+  //             width: 300,
+  //             height: 500,
+  //             child: ListView(
+  //               shrinkWrap: true,
+  //               children: [
+  //                 weatherViewModel.daily == null
+  //                     ? Center(
+  //                         child: Text('Oops...something went wrong',
+  //                             style:
+  //                                 TextStyle(fontSize: 21, color: Colors.white)))
+  //                     : Column(
+  //                         children: [
+  //                           buildDailySummary(weatherViewModel.daily),
+  //                         ],
+  //                       ),
+  //               ],
+  //             ),
+  //           ));
+  // }
 
   Widget buildDailySummary(List<Weather> dailyForecast) {
     return Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

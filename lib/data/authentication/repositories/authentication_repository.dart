@@ -1,8 +1,10 @@
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:agriconnect/data/authentication/models/user.dart';
+import 'package:agriconnect/ui/home_page.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 // Thrown if during the sign up process if a failure occurs.
@@ -92,7 +94,7 @@ class AuthenticationRepository {
     }
   }
 
-  Future<void> logInWithGoogle() async {
+  Future<void> logInWithGoogle(BuildContext context) async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser != null) {
@@ -102,7 +104,13 @@ class AuthenticationRepository {
           accessToken: googleAuth.accessToken,
           idToken: googleAuth.idToken,
         );
-        await _firebaseAuth.signInWithCredential(credential);
+
+        // Sign in to Firebase with the Google credential
+        final userCred = await _firebaseAuth.signInWithCredential(credential);
+        if (userCred.user != null) {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (_) => HomePage()));
+        } else {}
       } else {
         throw LogInWithGoogleFailure();
       }
@@ -113,6 +121,26 @@ class AuthenticationRepository {
       print('Error during Google sign in: $e');
       throw LogInWithGoogleFailure();
     }
+    // try {
+    //   final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+    //   if (googleUser != null) {
+    //     final GoogleSignInAuthentication googleAuth =
+    //         await googleUser.authentication;
+    //     final OAuthCredential credential = GoogleAuthProvider.credential(
+    //       accessToken: googleAuth.accessToken,
+    //       idToken: googleAuth.idToken,
+    //     );
+    //     await _firebaseAuth.signInWithCredential(credential);
+    //   } else {
+    //     throw LogInWithGoogleFailure();
+    //   }
+    // } on FirebaseAuthException catch (e) {
+    //   print('FirebaseAuthException during Google sign in: ${e.message}');
+    //   throw LogInWithGoogleFailure();
+    // } catch (e) {
+    //   print('Error during Google sign in: $e');
+    //   throw LogInWithGoogleFailure();
+    // }
   }
 
   // Future<void> logInWithGoogle() async {

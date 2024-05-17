@@ -7,27 +7,59 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'
+
 name: Test, Build and Release APK
+
 jobs:
-  build:
-    name: Build APK
+
+  test:
+    name: Run Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
         with:
           java-version: '12.x'
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '1.22.4'
+          flutter-version: '3.7.3'
       - run: flutter pub get
       - run: flutter test
+
+  build:
+    name: Build APK
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.5'
+      - run: flutter pub get
       - run: flutter clean
       - run: flutter build apk --release --split-per-abi
-      - name: Create a Release APK
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-apk
+          path: build/app/outputs/apk/release/*.apk
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download APK
+        uses: actions/download-artifact@v3
+        with:
+          name: release-apk
+      - name: Create a Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/apk/release/*.apk"
-          token: ${{ secrets.agriconnect_SECRET }}
+          artifacts: "*.apk"
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit: master
           tag: v1.0.${{ github.run_number }}

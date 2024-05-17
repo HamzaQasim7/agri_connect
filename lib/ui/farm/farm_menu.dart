@@ -1,5 +1,6 @@
 import 'package:agriconnect/ui/farm/news/news_home.dart';
 import 'package:agriconnect/ui/farm/planting/planting_menu.dart';
+import 'package:agriconnect/ui/farm/statistics/statistics_home.dart';
 import 'package:agriconnect/ui/farm/weather/weatherHome.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/colors/gf_color.dart';
@@ -93,14 +94,14 @@ class _FarmMenuState extends State<FarmMenu> {
             color: Colors.lightBlueAccent.withOpacity(0.3),
             icon: Icon(Icons.chevron_right),
             onTap: () {
-              UserMessageHelper.showSnackBar(context, 'Future update.');
+              // UserMessageHelper.showSnackBar(context, 'Future update.');
               // TODO: uncomment for the second report
-              // Navigator.push(
-              //   context,
-              //   PageTransition(
-              //       type: PageTransitionType.leftToRightWithFade,
-              //       child: StatisticsHome()),
-              // );
+              Navigator.push(
+                context,
+                PageTransition(
+                    type: PageTransitionType.leftToRightWithFade,
+                    child: StatisticsHome()),
+              );
             },
           ),
         ],
