@@ -132,5 +132,11 @@ class AppTheme {
       letterSpacing: 0.2,
       color: Colors.red,
     ),
+    hintStyle: TextStyle(
+      fontWeight: FontWeight.w600,
+      fontSize: 14,
+      letterSpacing: 0.2,
+      color: darkerText,
+    ),
   );
 }

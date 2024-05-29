@@ -27,6 +27,18 @@ class SignUpForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Sign Up',
+                  textAlign: TextAlign.start,
+                  style: Theme.of(context).textTheme.titleLarge!.apply(
+                        color: Colors.white,
+                        fontSizeFactor: 1.5,
+                      ),
+                ),
+              ),
+              const SizedBox(height: 12.0),
               _NameInput(),
               const SizedBox(height: 12.0),
               _EmailInput(),

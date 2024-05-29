@@ -30,6 +30,17 @@ class LoginForm extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             // mainAxisSize: MainAxisSize.min,
             children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Login',
+                  textAlign: TextAlign.start,
+                  style: Theme.of(context).textTheme.titleLarge!.apply(
+                        color: Colors.white,
+                        fontSizeFactor: 1.5,
+                      ),
+                ),
+              ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image.asset(
@@ -45,8 +56,9 @@ class LoginForm extends StatelessWidget {
               _LoginButton(),
               const SizedBox(height: 24.0),
               _SignUpButton(),
-              // const SizedBox(height: 24.0),
-              // _GoogleLoginButton(),
+              const SizedBox(height: 24.0),
+              _GoogleLoginButton(),
+              // SizedBox(height: MediaQuery.sizeOf(context).height * 0.13),
             ],
           ),
         ),
@@ -69,6 +81,7 @@ class _EmailInput extends StatelessWidget {
                 context.read<LoginCubit>().emailChanged(email),
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
+              hintStyle: TextStyle().copyWith(color: Colors.black87),
               prefixIcon: Icon(Icons.email),
               labelText: 'Email',
               helperText: '',

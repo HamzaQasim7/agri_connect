@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:agriconnect/data/authentication/models/user.dart';
-import 'package:agriconnect/ui/home_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -106,11 +105,7 @@ class AuthenticationRepository {
         );
 
         // Sign in to Firebase with the Google credential
-        final userCred = await _firebaseAuth.signInWithCredential(credential);
-        if (userCred.user != null) {
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (_) => HomePage()));
-        } else {}
+        await _firebaseAuth.signInWithCredential(credential);
       } else {
         throw LogInWithGoogleFailure();
       }

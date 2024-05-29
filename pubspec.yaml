@@ -45,6 +45,7 @@ dependencies:
   logger: ^2.1.0
   geocoding: ^3.0.0
   weather: ^3.1.1
+  shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,7 @@ flutter:
     - assets/images/
     - assets/model.tflite
     - assets/dict.txt
+    - assets/icons/
 
   fonts:
     - family: WeatherIcons

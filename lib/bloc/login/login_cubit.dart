@@ -15,6 +15,7 @@ class LoginCubit extends Cubit<LoginState> {
         super(const LoginState());
 
   final AuthenticationRepository _authenticationRepository;
+
   void emailChanged(String value) {
     final email = Email.dirty(value);
 
